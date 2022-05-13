@@ -6,7 +6,7 @@ LDLIBS=`pkg-config --libs opencv`
 .PHONY: clean
 
 convolution-cu: convolution.cu
-        nvcc -o $@ $< $(LDLIBS)
+	nvcc -o $@ $< $(LDLIBS)
 
 clean:
-        rm -f convolution-cu
+	rm -f convolution-cu

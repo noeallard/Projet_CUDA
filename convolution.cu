@@ -18,7 +18,7 @@ __global__ void grayscale( unsigned char * rgb, unsigned char * g, std::size_t c
      auto basGauche = rgb[((j+1) * cols + (i-1))];
      auto basDroite = rgb[((j+1) * cols + (i+1))];
      int matrix[3][3] = {0, 0 , 0, 0, 1, 0, 0, 0, 0};
-     int res = hautGauche * matrix[0][0] + haut * matrix[0][1] + hautDroite * matrix[0][2] + gauche * matrix[1][0] + courant * matrix[1][1] + droite * matrix[1][2] + basGauche * matrix[$
+     int res = hautGauche * matrix[0][0] + haut * matrix[0][1] + hautDroite * matrix[0][2] + gauche * matrix[1][0] + courant * matrix[1][1] + droite * matrix[1][2] + basGauche * matrix[2][0] + bas * matrix[2][1] + basDroite *matrix[2][2];
      g[(j * cols + i)] = res;
 
 }
